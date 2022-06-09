@@ -27,4 +27,51 @@ Console.WriteLine(Doctor);
 
 Console.WriteLine("========Police=========");
 
+Console.WriteLine("Enter your name : ");
+var PoliceName = Console.ReadLine();
+
+Console.WriteLine("Enter your occupation : ");
+var PoliceOccupation = Console.ReadLine();
+
+Console.WriteLine("Enter your salary : ");
+var PoliceSalary = Console.ReadLine();
+
+Console.WriteLine("Enter your tax : ");
+var PoliceTax = Console.ReadLine();
+
+var PSalary = decimal.Parse(PoliceSalary);
+var PTax = decimal.Parse(PoliceTax);
+
+var Pjob = new Police(PoliceName, PoliceOccupation, PSalary, PTax);
+var PJobs = Pjob.WhoIAM();
+
+Console.WriteLine(PJobs);
+
+var Police = Pjob.GetTax();
+Console.WriteLine(Police);
+
+
 Console.WriteLine("========Teacher=========");
+
+Console.WriteLine("Enter your name : ");
+var TeacherName = Console.ReadLine();
+
+Console.WriteLine("Enter your occupation : ");
+var TeacherOccupation = Console.ReadLine();
+
+Console.WriteLine("Enter your salary : ");
+var TeacherSalary = Console.ReadLine();
+
+Console.WriteLine("Enter your tax : ");
+var TeacherTax = Console.ReadLine();
+
+var TSalary = decimal.Parse(TeacherSalary);
+var TTax = decimal.Parse(TeacherTax);
+
+var Tjob = new Teacher(TeacherName, TeacherOccupation, TSalary, TTax);
+var TJobs = Tjob.WhoIAM();
+
+Console.WriteLine(TJobs);
+
+var Teacher = Tjob.GetTax();
+Console.WriteLine(Teacher);

@@ -6,7 +6,33 @@ using System.Threading.Tasks;
 
 namespace HW2
 {
-    internal class Police
+    public class Police
     {
+        private string Name { get; set; }
+        private string Occupation { get; set; }
+        private decimal Salary { get; set; }
+        private decimal Tax { get; set; }
+
+        public Police(string name, string occupation, decimal salary, decimal tax)
+        {
+            this.Name = name;
+            this.Occupation = occupation;
+            this.Salary = salary;
+            this.Tax = tax;
+        }
+        public string WhoIAM()
+        {
+
+            var response = Name + " is a " + Occupation;
+            return response;
+
+
+        }
+        public decimal GetTax()
+        {
+            return ((Salary * Tax) / 100);
+
+
+        }
     }
 }
